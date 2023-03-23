@@ -2,4 +2,7 @@ target 'iosApp' do
   use_frameworks!
   platform :ios, '14.1'
   pod 'shared', :path => '../shared'
+  pod 'pod_dependency', :path => '../pod_dependency'
+  pod 'subspec_dependency/Core', :path => '../subspec_dependency'
+
 end
