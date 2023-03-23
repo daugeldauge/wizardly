@@ -28,6 +28,8 @@ kotlin {
         framework {
             baseName = "shared"
         }
+
+        pod("Base64", version = "1.1.2")
     }
     
     sourceSets {
