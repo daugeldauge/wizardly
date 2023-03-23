@@ -30,6 +30,19 @@ kotlin {
         }
 
         pod("Base64", version = "1.1.2")
+
+
+        pod("pod_dependency") {
+            version = "1.0"
+            source = path(project.file("../pod_dependency"))
+
+            extraOpts = listOf("-compiler-option", "-fmodules")
+        }
+
+        pod("subspec_dependency/Core") {
+            version = "1.0"
+            source = path(project.file("../subspec_dependency"))
+        }
     }
     
     sourceSets {

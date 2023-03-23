@@ -1,23 +1,36 @@
 PODS:
   - Base64 (1.1.2)
+  - pod_dependency (1.0):
+    - subspec_dependency/Core
   - shared (1.0):
     - Base64 (= 1.1.2)
+    - pod_dependency (= 1.0)
+    - subspec_dependency/Core (= 1.0)
+  - subspec_dependency/Core (1.0)
 
 DEPENDENCIES:
+  - pod_dependency (from `../pod_dependency`)
   - shared (from `../shared`)
+  - subspec_dependency/Core (from `../subspec_dependency`)
 
 SPEC REPOS:
   trunk:
     - Base64
 
 EXTERNAL SOURCES:
+  pod_dependency:
+    :path: "../pod_dependency"
   shared:
     :path: "../shared"
+  subspec_dependency:
+    :path: "../subspec_dependency"
 
 SPEC CHECKSUMS:
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
-  shared: 7885b841d8f83b5f6149405ff596b3876a3e97d6
+  pod_dependency: 7a99ec6bbb000b8ebdf58286ca0063b0d3e4d746
+  shared: 854a9740c65827c76e75f449e816741f65808538
+  subspec_dependency: dd3d3ec6189e8bf1b63f409e736a761bc4acd7db
 
-PODFILE CHECKSUM: f282da88f39e69507b0a255187c8a6b644477756
+PODFILE CHECKSUM: 901eac9fc463f2315995a65851e3bccb6b4c7f67
 
 COCOAPODS: 1.12.0
