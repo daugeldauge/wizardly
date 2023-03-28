@@ -1,6 +1,8 @@
 package com.daugeldauge.wizardly
 
 import cocoapods.Base64.MF_Base64Codec
+import cocoapods.pod1.Pod1
+import cocoapods.pod2.Pod2
 import platform.UIKit.UIDevice
 
 class IOSPlatform : Platform {
@@ -13,3 +15,13 @@ class IOSPlatform : Platform {
 }
 
 actual fun getPlatform(): Platform = IOSPlatform()
+
+fun printPod1(p: Pod1) {
+    println(p.pod1())
+}
+
+fun printPod2(p: Pod2) {
+    println("Hi from Kt!")
+    println(p.pod2())
+    printPod1(p)
+}

@@ -1,9 +1,16 @@
 PODS:
   - Base64 (1.1.2)
+  - pod1 (1.0)
+  - pod2 (1.0):
+    - pod1
   - shared (1.0):
     - Base64 (= 1.1.2)
+    - pod1
+    - pod2
 
 DEPENDENCIES:
+  - pod1 (from `../pod1`)
+  - pod2 (from `../pod2`)
   - shared (from `../shared`)
 
 SPEC REPOS:
@@ -11,13 +18,19 @@ SPEC REPOS:
     - Base64
 
 EXTERNAL SOURCES:
+  pod1:
+    :path: "../pod1"
+  pod2:
+    :path: "../pod2"
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
-  shared: 7885b841d8f83b5f6149405ff596b3876a3e97d6
+  pod1: 0dffba7d060e42e214a822a278cd4daa2066afd1
+  pod2: b3f9c1dc9c90d4bf000d852077ecb386d347c5bd
+  shared: 78b59bfdb9be16134accf406449f1e226eab8eb4
 
-PODFILE CHECKSUM: f282da88f39e69507b0a255187c8a6b644477756
+PODFILE CHECKSUM: 102ed582a9d991a8db719659052e2877da6fa4d7
 
 COCOAPODS: 1.12.0
