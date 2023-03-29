@@ -32,8 +32,11 @@ kotlin {
         pod("Base64", version = "1.1.2")
 
         pod("pod1", path = project.file("../pod1"))
+
         pod("pod2") {
             source = path(project.file("../pod2"))
+
+            dependsOn("pod1")
 
             extraOpts = listOf(
                 "-compiler-option", "-fmodules"
