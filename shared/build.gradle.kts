@@ -42,6 +42,23 @@ kotlin {
                 "-compiler-option", "-fmodules"
             )
         }
+
+        pod("pod3") {
+            source = path(project.file("../pod3"))
+
+            dependencies.add("pod1")
+        }
+
+        pod("pod4") {
+            source = path(project.file("../pod4"))
+
+            dependsOn("pod2")
+            dependsOn("pod3")
+
+            extraOpts = listOf(
+                "-compiler-option", "-fmodules"
+            )
+        }
     }
     
     sourceSets {

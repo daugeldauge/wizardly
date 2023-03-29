@@ -4,4 +4,6 @@ target 'iosApp' do
   pod 'shared', :path => '../shared'
   pod 'pod1', :path => '../pod1'
   pod 'pod2', :path => '../pod2'
+  pod 'pod3', :path => '../pod3'
+  pod 'pod4', :path => '../pod4'
 end

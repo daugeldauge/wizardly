@@ -12,6 +12,8 @@ Pod::Spec.new do |spec|
     spec.dependency 'Base64', '1.1.2'
     spec.dependency 'pod1'
     spec.dependency 'pod2'
+    spec.dependency 'pod3'
+    spec.dependency 'pod4'
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':shared',
