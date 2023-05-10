@@ -2,6 +2,15 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    id("io.github.skeptick.libres").version("1.1.8")
+
+}
+
+libres {
+    generatedClassName = "MainRes" // "Res" by default
+    generateNamedArguments = true // false by default
+    baseLocaleLanguageCode = "ru" // "en" by default
+    camelCaseNamesForAppleFramework = true // false by default
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -49,3 +58,4 @@ android {
         minSdk = 33
     }
 }
+
