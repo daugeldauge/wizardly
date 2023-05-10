@@ -16,6 +16,7 @@ dependencyResolutionManagement {
         }
     }
 
+    @Suppress("UnstableApiUsage")
     repositories {
         mavenLocal()
         google()
