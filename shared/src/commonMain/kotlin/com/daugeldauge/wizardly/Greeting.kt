@@ -1,5 +1,6 @@
 package com.daugeldauge.wizardly
 
+
 class Greeting {
     private val platform: Platform = getPlatform()
 

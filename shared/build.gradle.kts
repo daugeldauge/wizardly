@@ -27,12 +27,27 @@ kotlin {
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
-        }
+//            isStatic = true
 
-        pod("Base64", version = "1.1.2")
+            export("com.arkivanov.decompose:decompose:2.0.0-alpha-02")
+        }
+//        useLibraries()
+
+//        pod("FlipperKit") {
+//            moduleName = "CouchbaseLite"
+//            packageName = "cocoapods.CouchbaseLite"
+//        }
+
+
     }
     
     sourceSets {
+        commonMain {
+            dependencies {
+                api("com.arkivanov.decompose:decompose:2.0.0-alpha-02")
+            }
+        }
+
         commonTest {
             dependencies {
                 implementation(kotlin("test"))

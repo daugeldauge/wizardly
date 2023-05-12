@@ -1,6 +1,6 @@
 package com.daugeldauge.wizardly
 
-import cocoapods.Base64.MF_Base64Codec
+//import cocoapods.CouchbaseLite.CBLErrorBusy
 import platform.UIKit.UIDevice
 
 class IOSPlatform : Platform {
@@ -8,7 +8,7 @@ class IOSPlatform : Platform {
         """
             ${UIDevice.currentDevice.systemName()}
             ${UIDevice.currentDevice.systemVersion}
-            ${MF_Base64Codec.base64StringFromData(MF_Base64Codec.dataFromBase64String("R3JlZXRpbmdzCg=="))}
+            ${""/*MF_Base64Codec.base64StringFromData(MF_Base64Codec.dataFromBase64String("R3JlZXRpbmdzCg=="))*/}
        """.trimIndent()
 }
 
