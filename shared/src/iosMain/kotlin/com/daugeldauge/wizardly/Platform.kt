@@ -1,6 +1,6 @@
 package com.daugeldauge.wizardly
 
-import cocoapods.Base64.MF_Base64Codec
+import cocoapods.Segment_Firebase.SEGAnalytics.Companion
 import platform.UIKit.UIDevice
 
 class IOSPlatform : Platform {

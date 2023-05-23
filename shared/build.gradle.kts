@@ -29,7 +29,13 @@ kotlin {
             baseName = "shared"
         }
 
-        pod("Base64", version = "1.1.2")
+//        pod("Base64", version = "1.1.2")
+        pod("Segment-Firebase") {
+            source = git("https://github.com/Reedyuk/analytics-ios-integration-firebase.git") {
+                branch = "kmm"
+            }
+            extraOpts += listOf("-compiler-option", "-fmodules")
+        }
     }
     
     sourceSets {
