@@ -33,6 +33,11 @@ kotlin {
     }
     
     sourceSets {
+        commonMain {
+            dependencies {
+                implementation("com.russhwolf:multiplatform-settings:1.0.0")
+            }
+        }
         commonTest {
             dependencies {
                 implementation(kotlin("test"))
