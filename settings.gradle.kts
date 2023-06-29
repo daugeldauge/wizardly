@@ -11,7 +11,7 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
 //            version("kotlin", "1.9.255-54362")
-            version("kotlin", "1.9.0-Beta")
+            version("kotlin", "1.9.0-RC")
             version("agp", "8.0.0")
         }
     }
