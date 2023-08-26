@@ -1,20 +1,12 @@
+
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("com.android.library")
+//    id("com.android.library")
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
-
-    android {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
-    }
+    jvm()
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -33,19 +25,25 @@ kotlin {
     }
     
     sourceSets {
+        commonMain {
+            dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+                implementation("co.touchlab:kermit:2.0.0-RC4") //Add latest version
+            }
+        }
+
         commonTest {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
     }
-
 }
 
-android {
-    namespace = "com.daugeldauge.wizardly"
-    compileSdk = 33
-    defaultConfig {
-        minSdk = 33
-    }
-}
+//android {
+//    namespace = "com.daugeldauge.wizardly"
+//    compileSdk = 33
+//    defaultConfig {
+//        minSdk = 33
+//    }
+//}
