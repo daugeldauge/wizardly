@@ -3,6 +3,7 @@ package com.daugeldauge.wizardly
 import cocoapods.Base64.MF_Base64Codec
 import platform.UIKit.UIDevice
 
+@OptIn(kotlinx.cinterop.ExperimentalForeignApi::class)
 class IOSPlatform : Platform {
     override val name: String =
         """
