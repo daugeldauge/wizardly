@@ -2,11 +2,17 @@ package com.daugeldauge.wizardly
 
 import co.touchlab.kermit.mutableLoggerConfigInit
 import cocoapods.Base64.MF_Base64Codec
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import platform.UIKit.UIDevice
 
 class IOSPlatform : Platform {
     init {
         mutableLoggerConfigInit(emptyList())
+
+        mutableMapOf("" to "")
+
+        Dispatchers.IO
     }
 
     override val name: String =

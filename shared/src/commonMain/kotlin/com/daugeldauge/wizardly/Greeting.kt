@@ -12,6 +12,8 @@ class Greeting {
         Dispatchers.IO
 
         mutableMapOf("to" to "to")
+
+        StringBuilder().append("").toString()
     }
 
     private val platform: Platform = getPlatform()

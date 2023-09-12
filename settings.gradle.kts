@@ -11,7 +11,7 @@ pluginManagement {
 dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
-            version("kotlin", "1.9.20-Beta-128")
+            version("kotlin", "1.9.20-Beta")
 //            version("kotlin", "1.9.10")
             version("agp", "8.0.0")
         }
