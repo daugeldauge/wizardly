@@ -27,3 +27,5 @@ dependencyResolutionManagement {
 rootProject.name = "wizardly"
 include(":androidApp")
 include(":shared")
+include(":shared2")
+include(":shared3")
