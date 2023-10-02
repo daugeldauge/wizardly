@@ -1,23 +1,29 @@
 PODS:
   - Base64 (1.1.2)
-  - shared (1.0):
+  - wizardly (1.0):
     - Base64 (= 1.1.2)
 
 DEPENDENCIES:
-  - shared (from `../shared`)
+  - wizardly (from `https://github.com/daugeldauge/wizardly`, branch `gitpodspec`)
 
 SPEC REPOS:
   trunk:
     - Base64
 
 EXTERNAL SOURCES:
-  shared:
-    :path: "../shared"
+  wizardly:
+    :branch: gitpodspec
+    :git: https://github.com/daugeldauge/wizardly
+
+CHECKOUT OPTIONS:
+  wizardly:
+    :commit: 747faeef450659d89a3cc7314df60d347a3d869a
+    :git: https://github.com/daugeldauge/wizardly
 
 SPEC CHECKSUMS:
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
-  shared: 7885b841d8f83b5f6149405ff596b3876a3e97d6
+  wizardly: 91923dbf842c54cb865630daef4f86bdefaaa798
 
-PODFILE CHECKSUM: f282da88f39e69507b0a255187c8a6b644477756
+PODFILE CHECKSUM: 20b3b352102ce1994cb99ac0fb523c6a800e4fff
 
 COCOAPODS: 1.12.1

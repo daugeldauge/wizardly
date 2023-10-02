@@ -25,5 +25,3 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "wizardly"
-include(":androidApp")
-include(":shared")

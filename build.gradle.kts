@@ -1,13 +1,51 @@
-
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    //trick: for the same plugin versions in all sub-modules
-    id("com.android.application").version(libs.versions.agp).apply(false)
-    id("com.android.library").version(libs.versions.agp).apply(false)
-    kotlin("android").version(libs.versions.kotlin).apply(false)
-    kotlin("multiplatform").version(libs.versions.kotlin).apply(false)
+    kotlin("multiplatform").version(libs.versions.kotlin)
+    kotlin("native.cocoapods").version(libs.versions.kotlin)
+    id("com.android.library").version(libs.versions.agp)
 }
 
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
+kotlin {
+    targetHierarchy.default()
+
+    android {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
+        }
+    }
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+
+    cocoapods {
+        summary = "Some description for the Shared Module"
+        homepage = "Link to the Shared Module homepage"
+        version = "1.0"
+        ios.deploymentTarget = "14.1"
+//        podfile = project.file("../iosApp/Podfile")
+        framework {
+            baseName = "shared"
+        }
+
+        pod("Base64", version = "1.1.2")
+    }
+    
+    sourceSets {
+        commonTest {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+    }
+
+}
+
+android {
+    namespace = "com.daugeldauge.wizardly"
+    compileSdk = 33
+    defaultConfig {
+        minSdk = 33
+    }
 }
