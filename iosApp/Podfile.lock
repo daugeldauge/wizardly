@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   wizardly:
-    :commit: 747faeef450659d89a3cc7314df60d347a3d869a
+    :commit: 6f40b1a9076bf295388fa6f9a9547803a94d2f43
     :git: https://github.com/daugeldauge/wizardly
 
 SPEC CHECKSUMS:
