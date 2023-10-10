@@ -18,6 +18,8 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+    macosArm64()
+    macosX64()
 
     cocoapods {
         summary = "Some description for the Shared Module"
@@ -33,6 +35,10 @@ kotlin {
     }
     
     sourceSets {
+        commonMain.dependencies {
+            implementation("co.touchlab:kermit:2.0.0")
+        }
+
         commonTest {
             dependencies {
                 implementation(kotlin("test"))
