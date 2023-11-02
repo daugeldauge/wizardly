@@ -5,6 +5,11 @@ import platform.UIKit.UIDevice
 
 @OptIn(kotlinx.cinterop.ExperimentalForeignApi::class)
 class IOSPlatform : Platform {
+    init {
+        mapOf("f" to "c")
+        mutableMapOf("" to "")
+    }
+
     override val name: String =
         """
             ${UIDevice.currentDevice.systemName()}

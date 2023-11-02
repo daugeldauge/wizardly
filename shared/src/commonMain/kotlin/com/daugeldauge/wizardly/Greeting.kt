@@ -1,15 +1,16 @@
 package com.daugeldauge.wizardly
 
-import co.touchlab.kermit.mutableLoggerConfigInit
+import kotlin.time.measureTime
 
 class Greeting {
     private val platform: Platform = getPlatform()
 
     init {
-        mutableLoggerConfigInit(emptyList())
+//        mutableLoggerConfigInit(emptyList())
     }
 
     fun greet(): String {
-        return "Hello, ${platform.name}!"
+        return sequenceOf("1", "2", "3").joinToString(separator = ";") + "hekk" + mutableMapOf("" to "")
+//        return "Hello, ${platform.name}!"
     }
 }
