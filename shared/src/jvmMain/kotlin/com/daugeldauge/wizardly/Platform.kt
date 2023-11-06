@@ -6,8 +6,10 @@ import kotlin.experimental.ExperimentalObjCName
 class AndroidPlatform : Platform {
     init {
         mapOf("" to "")
-        AbstractMutableCollection()
+        AbstractMutableCollection().map
         1 + 1
+
+        listOf("fff").mapNotNull {  }
     }
 
     @ExperimentalObjCName
