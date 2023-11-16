@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "wizardly",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daugeldauge/wizardly",
+      "state" : {
+        "branch" : "0.0.1-kmmbridge",
+        "revision" : "3001e24bbf1a2651c1128c1ce287934c4c421177"
+      }
+    }
+  ],
+  "version" : 2
+}
