@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.jetbrains.kotlin.konan.target.Family
 
 plugins {
+//    id("com.github.pagr0m.kotlin.native.spm") version "0.1.1"
     kotlin("multiplatform")
-    id("co.touchlab.kmmbridge") version "0.5.1"
     id("com.android.library")
     `maven-publish`
 }
@@ -52,15 +52,14 @@ publishing {
     repositories {
         maven {
             url = uri("https://maven.pkg.github.com/daugeldauge/wizardly")
-            credentials {
-                username = "daugeldauge"
-                password = "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"
-            }
         }
     }
 }
-
-kmmbridge {
-    spm()
-    mavenPublishArtifacts()
-}
+//
+//multiplatformSwiftPackage {
+//    swiftToolsVersion("5.3")
+//    targetPlatforms {
+//        iOS { v("13") }
+//    }
+//    packageName("shared")
+//}
